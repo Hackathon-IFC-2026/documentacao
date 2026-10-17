@@ -18,6 +18,7 @@ Links do projeto:
 -   Backend: [Repositório](https://github.com/Hackathon-IFC-2026/backend) e [Publicação](https://backend-mknu.onrender.com)
 -   Frontend: [Repositório](https://github.com/Hackathon-IFC-2026/frontend) e [Publicação]( https://frontendhackathon2026.vercel.app/)
 -   Figma: [Prototipagem](https://www.figma.com/design/0XiZumK2970i3Sq4aWXkb3/Hackathon-2026?m=auto&t=PvgcgpD17W1eLANo-6)
+-   Anotações: [Documento interno da equipe](https://docs.google.com/document/d/19xeWs5Gohuo6uG9HJgv1I0vq9AvRGCQZCKXD2qN7AdI/edit?usp=sharing)
 
 
 # 1. Situação Problema
