@@ -6,7 +6,7 @@ Um modelo para o desenvolvimento do Hackathon 2026 do IFC - Campus Araquari.
 
 
 Equipe:
-- [Bianca Isadora de Souza Joselli](https://github.com/BiancaJoselli)
+- [Bianca Isadora Joselli de Souza](https://github.com/BiancaJoselli)
 - [Giovana Rosa](https://github.com/giovana-rosa)
 - [Helena Soares Pereira](https://github.com/helenasoaresp)
 - [Rafael August Otto](https://github.com/rafael-otto)
