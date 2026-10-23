@@ -79,7 +79,6 @@ A modelagem será realizada no MySQL Workbench, utilizando chaves primárias e e
 Para resolver os relacionamentos de Muitos-para-Muitos (N:N), serão utilizadas tabelas associativas.
 
 - **Participantes do Projeto:** relaciona usuários e projetos. Um usuário pode participar de vários projetos, e um projeto pode possuir vários participantes.
-- **Participantes da Tarefa (opcional):** relaciona usuários e tarefas, caso uma tarefa possa ter vários responsáveis.
 
 Os principais relacionamentos previstos são:
 
@@ -91,8 +90,6 @@ Os principais relacionamentos previstos são:
 - Uma tarefa ou projeto pode possuir vários anexos.
 - Um usuário pode receber várias notificações.
 - Um usuário pode ser responsável por várias tarefas.
-
-# 4. Requisitos Funcionais e Regras de Negócio
 
 # 4. Requisitos Funcionais e Regras de Negócio
 
@@ -159,7 +156,7 @@ Requisitos não funcionais (RNFs) são restrições que definem os atributos de 
 - **RNF010 -** a interface não deve depender exclusivamente de cores para identificar prioridades ou situações.
 - **RNF011 -** o sistema deve evitar perda e duplicação indevida de dados.
 
-# 9. Considerações Finais
+# 6. Considerações Finais
 
 O sistema proposto busca melhorar a organização e o acompanhamento de projetos por meio da centralização de tarefas, responsáveis, prazos e documentos. O quadro Kanban, os filtros e as notificações deverão facilitar a visualização do andamento das atividades e contribuir para a redução de atrasos.
 
