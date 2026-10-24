@@ -60,36 +60,34 @@ O sistema utilizará um banco de dados relacional desenvolvido em MySQL para ger
 
 A modelagem será realizada no MySQL Workbench, utilizando chaves primárias e estrangeiras para garantir a integridade e a consistência dos dados.
 
-![Diagrama de Entidade-Relacionamento](arquivo%20modelagem/19.10.png)
+![Diagrama de Entidade-Relacionamento](img/model_atual.png)
 
 ## 3.1. Descrição das Entidades
 
-- **Usuários:** armazena os dados das contas cadastradas, como nome, e-mail, senha protegida e data de cadastro.
-- **Projetos:** armazena o nome, a descrição, o criador e a data de criação dos projetos.
-- **Participantes do Projeto:** relaciona usuários aos projetos dos quais participam.
-- **Tarefas:** armazena título, descrição, situação, prioridade, tipo, prazo e responsável.
-- **Checklists:** armazena os itens de verificação associados às tarefas.
-- **Comentários:** armazena o conteúdo, o autor e a data dos comentários.
-- **Anexos:** armazena links e informações de documentos associados aos projetos ou às tarefas.
-- **Notificações:** armazena avisos destinados aos usuários, incluindo data de criação e estado de leitura.
-- **Integrações:** poderá registrar as conexões autorizadas com serviços externos.
+- **Usuários:** Armazena os dados das contas cadastradas, como nome, e-mail, senha protegida e data de nascimento.
+- **Projetos:** Armazena o nome, a descrição, o criador e as datas de criação e atualização dos projetos.
+- **Participantes do Projeto:** Relaciona usuários aos projetos dos quais participam, registrando a data de entrada e o papel de cada participante.
+- **Tarefas:** Armazena o título, a descrição, a situação, a prioridade, o prazo, a posição no quadro e os usuários responsáveis pela criação e execução da tarefa.
+- **Checklists:** Armazena os itens de verificação associados às tarefas, indicando sua descrição, ordem e estado de conclusão.
+- **Comentários:** Armazena o conteúdo, o autor e a data de criação dos comentários vinculados às tarefas.
+- **Materiais de Apoio:** Armazena títulos e links de documentos e recursos associados aos projetos.
+- **Notificações:** Armazena avisos destinados aos usuários, incluindo a mensagem, o tipo, a data de criação e o estado de leitura.
 
 ## 3.2. Relacionamentos e Tabelas Associativas
 
-Para resolver os relacionamentos de Muitos-para-Muitos (N:N), serão utilizadas tabelas associativas.
-
-- **Participantes do Projeto:** relaciona usuários e projetos. Um usuário pode participar de vários projetos, e um projeto pode possuir vários participantes.
+A tabela **Participantes do Projeto** funciona como tabela associativa para representar o relacionamento muitos-para-muitos (N:N) entre usuários e projetos. Dessa forma, um usuário pode participar de vários projetos, e um projeto pode ter vários usuários participantes. Essa tabela também registra o papel de cada participante, que pode ser administrador ou participante.
 
 Os principais relacionamentos previstos são:
 
-- Um usuário pode criar vários projetos.
-- Um projeto pode possuir várias tarefas.
-- Um projeto pode possuir vários participantes.
-- Uma tarefa pode possuir vários itens de checklist.
-- Uma tarefa pode possuir vários comentários.
-- Uma tarefa ou projeto pode possuir vários anexos.
-- Um usuário pode receber várias notificações.
-- Um usuário pode ser responsável por várias tarefas.
+- Um usuário pode criar vários projetos, mas cada projeto possui um único criador.
+- Um projeto pode possuir várias tarefas, e cada tarefa pertence a um único projeto.
+- Um projeto pode possuir vários participantes, e um usuário pode participar de vários projetos.
+- Um usuário pode criar várias tarefas, e cada tarefa registra quem a criou.
+- Um usuário pode ser responsável por várias tarefas. Uma tarefa pode ficar sem responsável temporariamente, permanecendo bloqueada até que um administrador atribua outro participante.
+- Uma tarefa pode possuir vários itens de checklist, e cada item pertence a uma única tarefa.
+- Uma tarefa pode possuir vários comentários, e cada comentário pertence a uma tarefa e possui um único autor.
+- Um projeto pode possuir vários materiais de apoio, e cada material pertence a um único projeto e registra seu criador.
+- Um usuário pode receber várias notificações, e cada notificação é destinada a um único usuário.
 
 # 4. Requisitos Funcionais e Regras de Negócio
 
