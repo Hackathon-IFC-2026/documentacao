@@ -60,7 +60,7 @@ O sistema utilizará um banco de dados relacional desenvolvido em MySQL para ger
 
 A modelagem será realizada no MySQL Workbench, utilizando chaves primárias e estrangeiras para garantir a integridade e a consistência dos dados.
 
-![Diagrama de Entidade-Relacionamento](img/model_atual.png)
+![Diagrama de Entidade-Relacionamento](img/mod.png)
 
 ## 3.1. Descrição das Entidades
 
